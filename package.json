@@ -1,5 +1,6 @@
 {
   "name": "pokemon-battle-simulator",
+  "main": "lib/index.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,10 +14,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "babel src/ -d lib/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "prepublish": "yarn run build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +39,13 @@
     ]
   },
   "devDependencies": {
-    "flow-bin": "^0.237.2"
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-flow": "^7.24.7",
+    "babel-plugin-syntax-hermes-parser": "^0.22.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-ft-flow": "^3.0.9",
+    "flow-bin": "^0.237.2",
+    "hermes-eslint": "^0.22.0"
   }
 }
