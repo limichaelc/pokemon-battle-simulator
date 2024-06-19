@@ -22,6 +22,7 @@ function App(): React$MixedElement {
     <div className="App">
       <header className="App-header">
         <img src="https://img.pokemondb.net/artwork/large/nidorino.jpg" />
+        <img src="https://www.vhv.rs/dpng/d/424-4249873_pokemon-crystal-gengar-sprite-hd-png-download.png" />
         <p>Nidorino: {nidorinoHP}</p>
         <p>Gengar: {gengarHP}</p>
         <p>
