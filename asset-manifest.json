@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokemon-battle-simulator/static/css/main.4a5ca9b7.css",
+    "main.js": "/pokemon-battle-simulator/static/js/main.c6edd55a.js",
+    "static/js/453.3dfcdea5.chunk.js": "/pokemon-battle-simulator/static/js/453.3dfcdea5.chunk.js",
+    "index.html": "/pokemon-battle-simulator/index.html",
+    "main.4a5ca9b7.css.map": "/pokemon-battle-simulator/static/css/main.4a5ca9b7.css.map",
+    "main.c6edd55a.js.map": "/pokemon-battle-simulator/static/js/main.c6edd55a.js.map",
+    "453.3dfcdea5.chunk.js.map": "/pokemon-battle-simulator/static/js/453.3dfcdea5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a5ca9b7.css",
+    "static/js/main.c6edd55a.js"
+  ]
+}
