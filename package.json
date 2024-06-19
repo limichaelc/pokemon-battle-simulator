@@ -1,6 +1,6 @@
 {
   "name": "pokemon-battle-simulator",
-  "main": "lib/index.js",
+  "main": "build/index.js",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://erwong25.github.io/pokemon-battle-simulator",
