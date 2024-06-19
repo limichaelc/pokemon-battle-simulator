@@ -3,6 +3,7 @@
   "main": "lib/index.js",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://erwong25.github.io/pokemon-battle-simulator",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
