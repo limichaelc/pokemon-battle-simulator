@@ -18,7 +18,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "prepublish": "yarn run build"
+    "prepublish": "yarn run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +48,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-ft-flow": "^3.0.9",
     "flow-bin": "^0.237.2",
+    "gh-pages": "^6.1.1",
     "hermes-eslint": "^0.22.0"
   }
 }
