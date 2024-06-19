@@ -2,6 +2,7 @@
 
 import type { Type } from "./types";
 import type { Move } from "./moves";
+import { MOVES } from "./moves";
 
 type Stats = {
   atk: number,
@@ -20,40 +21,8 @@ export type Pokemon = {
   moves: Array<Move>,
 };
 
-const POISON_STING: Move = {
-  name: "Poison Sting",
-  type: "Poison",
-  power: 15,
-  accuracy: 1,
-  damageCategory: "Physical",
-};
-
-const HORN_ATTACK: Move = {
-  name: "Horn Attack",
-  type: "Normal",
-  power: 65,
-  accuracy: 1,
-  damageCategory: "Physical",
-};
-
-const SHADOW_BALL: Move = {
-  name: "Shadow Ball",
-  type: "Ghost",
-  power: 80,
-  accuracy: 1,
-  damageCategory: "Special",
-};
-
-const POLTERGEIST: Move = {
-  name: "Poltergeist",
-  type: "Ghost",
-  power: 110,
-  accuracy: 0.9,
-  damageCategory: "Special",
-};
-
-const GENGAR: Pokemon = {
-  moves: [SHADOW_BALL, POLTERGEIST],
+export const GENGAR: Pokemon = {
+  moves: [MOVES.SHADOW_BALL, MOVES.POLTERGEIST],
   name: "Gengar",
   types: ["Poison", "Ghost"],
   stats: {
@@ -67,8 +36,8 @@ const GENGAR: Pokemon = {
   },
 };
 
-const NIDORINO: Pokemon = {
-  moves: [POISON_STING, HORN_ATTACK],
+export const NIDORINO: Pokemon = {
+  moves: [MOVES.POISON_STING, MOVES.HORN_ATTACK],
   name: "Nidorino",
   types: ["Poison"],
   stats: {

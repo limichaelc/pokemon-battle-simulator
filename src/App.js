@@ -1,27 +1,55 @@
 // @flow
 // @format
 
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+import { useState } from "react";
 import computeDamage from "./damageCalculations";
+import { GENGAR, NIDORINO } from "./pokemon.js";
+
+function moveSelector() {
+  return Math.random() >= 0.5 ? 0 : 1;
+}
 
 function App(): React$MixedElement {
+  const [damageDealt, setDamageDealt] = useState(0);
+  const [nidorinoHP, setNidorinoHP] = useState(NIDORINO.stats.maxHp);
+  const [gengarHP, setGengarHP] = useState(GENGAR.stats.maxHp);
+  const [nidorinoMove, setNidorinoMove] = useState("");
+  const [gengarMove, setGengarMove] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="https://img.pokemondb.net/artwork/large/nidorino.jpg" />
+        <p>Nidorino: {nidorinoHP}</p>
+        <p>Gengar: {gengarHP}</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Nidorino used {nidorinoMove}! Gengar took {damageDealt} damage.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Gengar used {gengarMove}</p>
+        <p>
+          {NIDORINO.moves.map((item) => (
+            <button
+              onClick={() => {
+                const opponentMove = GENGAR.moves[moveSelector()];
+                setGengarMove(opponentMove.name);
+                setNidorinoMove(item.name);
+                const attackDamage = computeDamage(item, NIDORINO, GENGAR);
+                const opponentDamage = computeDamage(
+                  opponentMove,
+                  GENGAR,
+                  NIDORINO
+                );
+                setDamageDealt(attackDamage);
+                setNidorinoHP(nidorinoHP - opponentDamage);
+                setGengarHP(gengarHP - attackDamage);
+              }}
+            >
+              {item.name}
+            </button>
+          ))}
+        </p>
       </header>
     </div>
   );
